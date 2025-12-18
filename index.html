@@ -245,14 +245,27 @@
   </div>
 
   <div class="container" id="main-content">
-      <section class="hero">
+      <!-- <section class="hero">
           <div>
               <h1>📦 File Center</h1>
               <p>
-                Tài liệu tham khảo, chỉ mang tính chất minh họa 🐧
+                  Trải nghiệm kho lưu trữ tài nguyên tối ưu. 
+                  Dễ dàng truy cập các công cụ, dataset và tài liệu kỹ thuật được chọn lọc kỹ lưỡng.
               </p>
           </div>
-          <img src="asset/wh.png" alt="Cloud Storage">
+          <img src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?q=80&w=1000&auto=format&fit=crop" alt="Cloud Storage">
+      </section> -->
+
+        <section class="hero">
+          <div>
+              <h1>📦 Chợ đen</h1>
+              <p>
+                Trao đổi và buôn bán sinh vật quý hiếm.
+                <br>
+                ---Đầu tư hdpe là ngon luôn----
+              </p>
+          </div>
+          <img src="https://i.postimg.cc/wjDHxpvC/caa7cf08-28f1-41f9-87c6-bb0518b55718.jpg" alt="Cloud Storage">
       </section>
         
       <div class="line"></div>
@@ -263,17 +276,17 @@
   </div>
 
 <script>
-const DATA_URL = "asset/data.json";
+const DATA_URL = atob("aHR0cDovL2xvY2FsaG9zdDo4MDExL2RhdGEuanNvbg==");
 const CORRECT_PASSWORD = "hdpe";
 
 const downloadIcon = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>`;
 
 
-// window.onload = function() {
-//     if (sessionStorage.getItem("isLoggedIn") === "true") {
-//         unlockPage();
-//     }
-// };
+window.onload = function() {
+    if (sessionStorage.getItem("isLoggedIn") === "true") {
+        unlockPage();
+    }
+};
 
 
 function handleKeyPress(e) {
@@ -322,7 +335,7 @@ function loadData(){
         div.style.opacity = "0";
 
         div.innerHTML = `
-          <img src="${f.image || ''}" alt="${f.name}">
+          <img src="${f.image || 'https://via.placeholder.com/300x180/1e293b/fff?text=No+Image'}" alt="${f.name}">
           <div class="size">${f.size}</div>
           <h3>${f.name}</h3>
           <p>${f.description}</p>
